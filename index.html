@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { max-width: 100%; overflow-x: hidden; }
   :root {
     --black: #050505;
     --white: #f0ede8;
@@ -25,7 +24,6 @@
     font-size: 13px;
     overflow-x: hidden;
   }
-
   body::before {
     content: ''; position: fixed; inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
@@ -185,7 +183,7 @@
     align-items: center; gap: 28px;
     padding: 22px 0; border-bottom: 1px solid var(--border);
     text-decoration: none; color: var(--white);
-    position: relative; cursor: none;
+    position: relative;
   }
   .download-row::before {
     content: ''; position: absolute; inset: 0 -40px;
@@ -477,7 +475,7 @@
 </footer>
 
 <script>
-  const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.style.opacity = '1';
