@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://arlamusic.com/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://arlamusic.com/assets/hero.jpg</image:loc>
+      <image:title>ARLA</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://arlamusic.com/assets/cover-when-i-close-my-eyes.jpg</image:loc>
+      <image:title>When I Close My Eyes (ARLA &amp; BAAT Remix)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://arlamusic.com/assets/cover-ko.jpg</image:loc>
+      <image:title>K.O. (ARLA Remix)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://arlamusic.com/assets/cover-call-me.jpg</image:loc>
+      <image:title>Call Me (ARLA Remix)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://arlamusic.com/assets/cover-arriba.jpg</image:loc>
+      <image:title>Arriba! (BAAT &amp; ARLA Remix)</image:title>
+    </image:image>
+  </url>
+</urlset>
