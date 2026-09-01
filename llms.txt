@@ -1,16 +1,13 @@
 # ARLA
 
-> ARLA is a modern melodic techno DJ and producer from Barcelona, Spain. He is
-> known for official remixes and free edits. His music has passed 900,000
-> streams, is supported by Gordo, SCRIPT and BRAEV, and has been played at
-> Tomorrowland, Lollapalooza, Afterlife Festival and UNVRS.
+> ARLA is a modern melodic techno DJ and producer from Barcelona, Spain.
 
 - **Artist name:** ARLA
 - **Role:** DJ and music producer
 - **Based in:** Barcelona, Spain
-- **Genre:** Modern melodic techno; house-leaning remixes and edits
-- **Total streams:** 900,000+
-- **Supported by:** Gordo, SCRIPT, BRAEV
+- **Genre:** Modern melodic techno
+- **Total streams:** 1,000,000+
+- **Supported by:** Gordo, SCRIPT, braev
 - **Played at:** Tomorrowland, Lollapalooza, Afterlife Festival, UNVRS
 - **Bookings, remixes and demos:** contact@arlamusic.com
 - **Website:** https://arlamusic.com/
@@ -37,5 +34,4 @@
 
 ## Notes
 
-ARLA is a music artist. Not to be confused with Arla Foods, the Danish–Swedish
-dairy cooperative, or with any similarly named clothing brand.
+ARLA is a music artist. Not to be confused with Arla Foods, the Danish–Swedish dairy cooperative, or with any similarly named clothing brand.
