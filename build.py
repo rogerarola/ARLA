@@ -4,7 +4,7 @@
     python3 build.py
 
 Reads data.json and writes index.html, releases/, free-downloads/, one folder
-per track, redirects from the old remixes/ and mashups/ URLs, 404.html,
+per track, 404.html,
 sitemap.xml and llms.txt. Edit data.json, run this, commit the output.
 No dependencies beyond the Python standard library.
 """
@@ -33,10 +33,6 @@ def hub_of(t):
     return "free-downloads" if t["free"] else "releases"
 
 HUB_LABEL = {"releases": "Releases", "free-downloads": "Free Downloads"}
-
-def old_path_of(t):
-    """Where the track lived before September 2026. Kept as a redirect."""
-    return f'/{"mashups" if t["kind"] == "mashup" else "remixes"}/{t["slug"]}/'
 
 def path_of(t):
     return f'/{hub_of(t)}/{t["slug"]}/'
@@ -546,27 +542,7 @@ def build_hub(hub):
 </html>
 """
 
-# ---------------------------------------------------------------- redirects / 404
-def build_redirect(to, label):
-    """Old URL kept alive on GitHub Pages: an instant meta refresh, which
-    Google treats as a permanent redirect, plus a canonical to the new URL."""
-    url = BASE + to
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>{e(label)} | ARLA</title>
-<link rel="canonical" href="{url}">
-<meta http-equiv="refresh" content="0; url={to}">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script>location.replace({json.dumps(to)} + location.hash)</script>
-</head>
-<body style="background:#05070c;color:#eef2f7;font-family:sans-serif;padding:40px">
-<p>This page has moved to <a style="color:#4da9e3" href="{to}">{e(label)}</a>.</p>
-</body>
-</html>
-"""
-
+# ---------------------------------------------------------------- 404
 def build_404():
     og = ("/assets/og-image.jpg", 1200, 630, "ARLA, photographed in deep blue light, with the ARLA wordmark")
     return head("Page not found | ARLA", "This page does not exist on arlamusic.com.", "/404.html", og, robots="noindex, follow") + f"""
@@ -635,15 +611,12 @@ def write(rel, content):
 if __name__ == "__main__":
     write("index.html", build_home())
     import shutil
-    for old in ("remixes", "mashups"):
+    for old in ("remixes", "mashups"):  # retired sections, not rebuilt
         shutil.rmtree(os.path.join(ROOT, old), ignore_errors=True)
     write("releases/index.html", build_hub("releases"))
     write("free-downloads/index.html", build_hub("free-downloads"))
-    write("remixes/index.html", build_redirect("/releases/", "ARLA Releases"))
-    write("mashups/index.html", build_redirect("/free-downloads/", "ARLA Free Downloads"))
     for t in TRACKS:
         write(path_of(t) + "index.html", build_track(t))
-        write(old_path_of(t) + "index.html", build_redirect(path_of(t), full_title(t)))
     write("404.html", build_404())
     write("sitemap.xml", build_sitemap())
     write("llms.txt", build_llms())
