@@ -273,9 +273,8 @@ main{position:relative;z-index:1}
 
 .rel{display:flex;flex-direction:column;text-decoration:none;color:var(--paper);height:100%}
 .art{display:block;position:relative;aspect-ratio:1;overflow:hidden;background:var(--ink-2);isolation:isolate}
-.art img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .5s}
+.art img{width:100%;height:100%;object-fit:cover}
 .art::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px var(--line-2);pointer-events:none}
-.rel:hover .art img,.rel:focus-visible .art img{transform:scale(1.05)}
 .rel-go{position:absolute;right:12px;bottom:12px;width:38px;height:38px;display:grid;place-items:center;background:var(--paper);color:var(--ink);opacity:0;transform:translateY(6px);transition:opacity .35s,transform .45s var(--ease)}
 .rel-go .ic{font-size:15px}
 .rel:hover .rel-go,.rel:focus-visible .rel-go{opacity:1;transform:none}
