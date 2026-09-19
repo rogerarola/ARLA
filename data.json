@@ -1,0 +1,188 @@
+{
+  "site": {
+    "name": "ARLA",
+    "url": "https://arlamusic.com",
+    "email": "contact@arlamusic.com",
+    "tagline": "Melodic techno DJ and producer from Barcelona.",
+    "description": "ARLA is a melodic techno DJ and producer from Barcelona, Spain. Official releases, remixes, mashups and free downloads. Supported by GORDO, SCRIPT and braev at Tomorrowland, Lollapalooza, Afterlife and UNVRS.",
+    "plays": "1M+",
+    "supporters": [
+      "GORDO",
+      "SCRIPT",
+      "braev"
+    ],
+    "stages": [
+      "Tomorrowland",
+      "Lollapalooza",
+      "Afterlife",
+      "UNVRS"
+    ],
+    "spotify": "https://open.spotify.com/artist/6rKoZuVR1aYB0Q0vYCIQU2",
+    "soundcloud": "https://soundcloud.com/arla_ofc",
+    "youtube": "https://www.youtube.com/@arla_ofc",
+    "instagram": "https://www.instagram.com/arlaofc/"
+  },
+  "tracks": [
+    {
+      "slug": "when-i-close-my-eyes-arla-baat-remix",
+      "kind": "remix",
+      "title": "When I Close My Eyes",
+      "version": "ARLA & BAAT Remix",
+      "original_by": [
+        "DALEXO",
+        "Adrian Fyrla",
+        "Boix & Breakloop",
+        "GiPX"
+      ],
+      "with": [
+        "BAAT"
+      ],
+      "album": "When I Close My Eyes (Remixes)",
+      "cover": "cover-when-i-close-my-eyes",
+      "url": "https://fanlink.tv/when-i-close-my-eyes-arla-baat-remix",
+      "spotify": "https://open.spotify.com/track/5da02XxZtwAvrQiAdct8tH",
+      "official": true,
+      "free": false,
+      "beatport": "https://www.beatport.com/release/when-i-close-my-eyes-remixes/5761150",
+      "label": "LoudKult",
+      "date": "2026-01-02"
+    },
+    {
+      "slug": "ko-arla-remix",
+      "kind": "remix",
+      "title": "K.O.",
+      "version": "ARLA Remix",
+      "original_by": [
+        "LAVINIA",
+        "Ely Oaks"
+      ],
+      "with": [],
+      "album": "K.O. (Remixes)",
+      "cover": "cover-ko",
+      "url": "https://fanlink.tv/ko-arla-remix",
+      "official": true,
+      "free": false,
+      "beatport": "https://www.beatport.com/release/ko-remixes/4812814",
+      "label": "JINX Music",
+      "date": "2024-11-08"
+    },
+    {
+      "slug": "call-me-arla-remix",
+      "kind": "remix",
+      "title": "Call Me",
+      "version": "ARLA Remix",
+      "original_by": [
+        "Brian Cross",
+        "DALEXO",
+        "Kelly Matejcic"
+      ],
+      "with": [],
+      "album": "Call Me (ARLA Remix)",
+      "cover": "cover-call-me",
+      "url": "https://streamlink.to/call-me-roger-arola-remix",
+      "official": true,
+      "free": false,
+      "beatport": "https://www.beatport.com/release/call-me-arla-remix/3817704",
+      "label": "Tremble",
+      "date": "2022-08-05"
+    },
+    {
+      "slug": "arriba-baat-arla-remix",
+      "kind": "remix",
+      "title": "Arriba!",
+      "version": "BAAT & ARLA Remix",
+      "original_by": [
+        "Marsal Ventura",
+        "DJ Pelos",
+        "Jbill"
+      ],
+      "with": [
+        "BAAT"
+      ],
+      "album": "Arriba! (The Remixes)",
+      "cover": "cover-arriba",
+      "url": "https://streamlink.to/arriba-baat-arla-remix",
+      "official": true,
+      "free": false,
+      "beatport": "https://www.beatport.com/release/arriba-the-remixes/4112563",
+      "label": "Addicting Records",
+      "date": "2023-05-19"
+    },
+    {
+      "slug": "lights-go-out-arla-remix",
+      "kind": "remix",
+      "title": "Lights Go Out",
+      "version": "ARLA Remix",
+      "original_by": [
+        "John Summit"
+      ],
+      "with": [],
+      "cover": "cover-lights-go-out",
+      "url": "https://hypeddit.com/xe34xg",
+      "official": false,
+      "free": true,
+      "cover_px": 800
+    },
+    {
+      "slug": "human-now-arla-baat-remix",
+      "kind": "remix",
+      "title": "Human Now",
+      "version": "ARLA & BAAT Remix",
+      "original_by": [
+        "Anyma",
+        "Luke Steele"
+      ],
+      "with": [
+        "BAAT"
+      ],
+      "cover": "cover-human-now",
+      "url": "https://hypeddit.com/jilmui",
+      "official": false,
+      "free": true,
+      "cover_px": 800
+    },
+    {
+      "slug": "olvidarte-arla-edit",
+      "kind": "edit",
+      "title": "Olvidarte",
+      "version": "ARLA Edit",
+      "original_by": [
+        "Gordo",
+        "Emilia",
+        "Seth Hills"
+      ],
+      "with": [],
+      "cover": "cover-olvidarte",
+      "url": "https://hypeddit.com/secg2w",
+      "official": false,
+      "free": true,
+      "cover_px": 800
+    },
+    {
+      "slug": "aria-no-good-sorry-be-my-lover-arla-mashup",
+      "kind": "mashup",
+      "title": "ARIA × No Good × Sorry × Be My Lover",
+      "short_title": "ARIA × No Good × Sorry × Be My Lover",
+      "version": "ARLA Mashup",
+      "original_by": [
+        "Argy",
+        "Omnya",
+        "Morten",
+        "Blond:ish",
+        "Eran Hersh",
+        "Darmon",
+        "Madonna",
+        "Miss Monique",
+        "Hypaton",
+        "David Guetta",
+        "La Bouche"
+      ],
+      "with": [],
+      "cover": "cover-aria-mashup",
+      "url": "https://hypeddit.com/g6tn6o",
+      "official": false,
+      "free": true,
+      "cover_px": 800
+    }
+  ]
+}
