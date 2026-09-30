@@ -8,11 +8,14 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-/* Theme: dark only, on purpose. The identity is the blue-lit portrait on
+/* Background is pure #000 on purpose: any other near-black is colour-
+   converted slightly differently per rendering layer in Chrome on macOS,
+   which showed as visible seams between sections.
+   Theme: dark only, on purpose. The identity is the blue-lit portrait on
    black. The accent is the blue of the shirt in that photograph, so the
    whole site is lit by the same light as the picture. */
 :root{
-  --ink:#060606;
+  --ink:#000000;
   --ink-2:#0d0d0d;
   --ink-3:#141414;
   --paper:#eef2f7;
@@ -81,7 +84,7 @@ p{max-width:65ch}
 .nav > *{pointer-events:auto}
 .nav::before{
   content:'';position:absolute;inset:0 0 -24px;z-index:-1;pointer-events:none;
-  background:linear-gradient(to bottom,rgba(6,6,6,.94),rgba(6,6,6,.7) 60%,transparent);
+  background:linear-gradient(to bottom,rgba(0,0,0,.94),rgba(0,0,0,.7) 60%,transparent);
   opacity:0;
 }
 .nav.solid::before{opacity:1}
@@ -93,12 +96,12 @@ p{max-width:65ch}
 }
 @keyframes fadein{to{opacity:1}}
 .nav-mark{display:flex;align-items:center;text-decoration:none;justify-self:start}
-.nav-mark svg{height:15px;width:auto;fill:var(--paper);transition:opacity .25s;filter:drop-shadow(0 1px 2px rgba(6,6,6,.98)) drop-shadow(0 0 9px rgba(6,6,6,.95))}
+.nav-mark svg{height:15px;width:auto;fill:var(--paper);transition:opacity .25s;filter:drop-shadow(0 1px 2px rgba(0,0,0,.98)) drop-shadow(0 0 9px rgba(0,0,0,.95))}
 .nav-mark:hover svg{opacity:.6}
 .nav-links{display:flex;gap:34px;list-style:none;justify-self:center}
 .nav-links a{
   text-decoration:none;color:var(--dim);transition:color .25s;position:relative;padding:4px 0;
-  text-shadow:0 1px 2px rgba(6,6,6,.98),0 0 9px rgba(6,6,6,.95),0 0 20px rgba(6,6,6,.8);
+  text-shadow:0 1px 2px rgba(0,0,0,.98),0 0 9px rgba(0,0,0,.95),0 0 20px rgba(0,0,0,.8);
 }
 .nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
 .nav-links a:hover,.nav-links a[aria-current]{color:var(--paper)}
@@ -106,7 +109,7 @@ p{max-width:65ch}
 .nav-end{justify-self:end;display:flex;align-items:center;gap:14px}
 .nav-cta{
   display:inline-flex;align-items:center;gap:9px;border:1px solid var(--paper);padding:10px 18px;
-  text-decoration:none;color:var(--ink);background:var(--paper);box-shadow:0 2px 18px rgba(6,6,6,.5);
+  text-decoration:none;color:var(--ink);background:var(--paper);box-shadow:0 2px 18px rgba(0,0,0,.5);
   transition:background .3s,color .3s,border-color .3s,transform .2s var(--ease);
 }
 .nav-cta .ic{font-size:12px;transition:transform .4s var(--ease)}
@@ -117,7 +120,7 @@ p{max-width:65ch}
 .nav-toggle{
   display:none;background:none;border:0;cursor:pointer;width:40px;height:40px;padding:0;color:var(--paper);
   align-items:center;justify-content:center;margin-right:-8px;
-  filter:drop-shadow(0 1px 2px rgba(6,6,6,.98)) drop-shadow(0 0 9px rgba(6,6,6,.95));
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.98)) drop-shadow(0 0 9px rgba(0,0,0,.95));
 }
 .nav-toggle span{display:block;position:relative;width:22px;height:1.5px;background:currentColor;transition:background .2s}
 .nav-toggle span::before,.nav-toggle span::after{content:'';position:absolute;left:0;width:22px;height:1.5px;background:currentColor;transition:transform .4s var(--ease),top .3s}
@@ -145,7 +148,7 @@ body.menu-open .menu li:nth-child(4) a{transition-delay:.28s}
 /* ─── BUTTONS (one shape rule: sharp corners everywhere) ─── */
 .btn{
   display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 22px;text-decoration:none;
-  border:1px solid var(--line);color:var(--paper);background:rgba(6,6,6,.35);
+  border:1px solid var(--line);color:var(--paper);background:rgba(0,0,0,.35);
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   transition:background .3s,color .3s,border-color .3s,transform .2s var(--ease);
 }
@@ -185,17 +188,17 @@ main{position:relative;z-index:1}
 .hero-media::after{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(58% 30% at 50% 52%,rgba(6,6,6,.66) 0%,rgba(6,6,6,.4) 55%,transparent 100%),
-    linear-gradient(to bottom,rgba(6,6,6,.7) 0%,transparent 22%,transparent 70%,var(--ink) 100%);
+    radial-gradient(58% 30% at 50% 52%,rgba(0,0,0,.66) 0%,rgba(0,0,0,.4) 55%,transparent 100%),
+    linear-gradient(to bottom,rgba(0,0,0,.7) 0%,transparent 22%,transparent 70%,var(--ink) 100%);
 }
 /* bottom fade lives on the hero itself, not the moving photo, so the
    parallax never exposes a hard edge against the next section */
 .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:34%;z-index:1;pointer-events:none;background:linear-gradient(to bottom,transparent,var(--ink))}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1400px;text-align:center}
 .hero-title{display:flex;align-items:center;justify-content:center}
-.hero-title svg{width:clamp(250px,54vw,760px);height:auto;fill:var(--paper);filter:drop-shadow(0 4px 44px rgba(6,6,6,.75))}
+.hero-title svg{width:clamp(250px,54vw,760px);height:auto;fill:var(--paper);filter:drop-shadow(0 4px 44px rgba(0,0,0,.75))}
 .hero-foot{position:absolute;left:var(--pad);right:var(--pad);bottom:clamp(28px,5vh,56px);z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
-.hero-sub{color:var(--dim);font-size:clamp(15px,1.25vw,18px);line-height:1.45;text-shadow:0 1px 14px rgba(6,6,6,.9)}
+.hero-sub{color:var(--dim);font-size:clamp(15px,1.25vw,18px);line-height:1.45;text-shadow:0 1px 14px rgba(0,0,0,.9)}
 .hero-sub b{color:var(--paper)}
 .hero-cta{display:flex;gap:10px;flex-wrap:wrap}
 
@@ -218,10 +221,6 @@ main{position:relative;z-index:1}
 @keyframes mediaout{to{opacity:.35;transform:translateY(32vh)}}
 @keyframes footout{to{opacity:0}}
 .over{position:relative;z-index:2;background:var(--ink)}
-/* Chrome on macOS can colour-convert the root layer and composited layers
-   differently, so the same --ink showed as two blacks (6 vs 8) between
-   sections. Keep all page content on composited layers so it renders as one. */
-main,.foot{will-change:transform}
 
 /* ─── ABOUT / CREDENTIALS ─── */
 .about{padding-top:clamp(88px,13vh,150px)}

@@ -163,7 +163,7 @@ def head(title, desc, path, og_image, og_type="website", extra="", robots="index
 {f'<link rel="canonical" href="{url}">' if robots.startswith("index") else ""}
 <meta name="robots" content="{robots}">
 <meta name="author" content="ARLA">
-<meta name="theme-color" content="#060606">
+<meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="ARLA Music">
