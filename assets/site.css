@@ -218,6 +218,10 @@ main{position:relative;z-index:1}
 @keyframes mediaout{to{opacity:.35;transform:translateY(32vh)}}
 @keyframes footout{to{opacity:0}}
 .over{position:relative;z-index:2;background:var(--ink)}
+/* Chrome on macOS can colour-convert the root layer and composited layers
+   differently, so the same --ink showed as two blacks (6 vs 8) between
+   sections. Keep all page content on composited layers so it renders as one. */
+main,.foot{will-change:transform}
 
 /* ─── ABOUT / CREDENTIALS ─── */
 .about{padding-top:clamp(88px,13vh,150px)}

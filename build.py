@@ -269,8 +269,8 @@ def build_home():
              "description": "Official site of ARLA, melodic techno DJ and producer from Barcelona, Spain.", "inLanguage": "en", "publisher": {"@id": ARTIST_ID}},
             {"@type": "WebPage", "@id": BASE + "/#webpage", "url": BASE + "/", "name": title, "isPartOf": {"@id": BASE + "/#website"},
              "about": {"@id": ARTIST_ID}, "primaryImageOfPage": {"@id": BASE + "/#heroimage"}, "inLanguage": "en"},
-            {"@type": "ImageObject", "@id": BASE + "/#heroimage", "url": BASE + "/assets/hero-wide-3200.jpg", "contentUrl": BASE + "/assets/hero-wide-3200.jpg",
-             "width": 3200, "height": 1800, "caption": "ARLA photographed in deep blue light"},
+            {"@type": "ImageObject", "@id": BASE + "/#heroimage", "url": BASE + "/assets/hero-wide-2000.jpg", "contentUrl": BASE + "/assets/hero-wide-2000.jpg",
+             "width": 2000, "height": 1125, "caption": "ARLA photographed in deep blue light"},
             artist_node(),
         ] + [recording_node(t) for t in TRACKS],
     }
@@ -288,8 +288,8 @@ def build_home():
     <picture>
       <source media="(max-width:860px)" type="image/webp" srcset="/assets/hero-tall.webp">
       <source media="(max-width:860px)" srcset="/assets/hero-tall.jpg">
-      <source type="image/webp" srcset="/assets/hero-wide-1600.webp 1600w, /assets/hero-wide-3200.webp 3200w" sizes="100vw">
-      <img src="/assets/hero-wide-1600.jpg" srcset="/assets/hero-wide-1600.jpg 1600w, /assets/hero-wide-3200.jpg 3200w" sizes="100vw"
+      <source type="image/webp" srcset="/assets/hero-wide-1600.webp 1600w, /assets/hero-wide-2000.webp 2000w" sizes="100vw">
+      <img src="/assets/hero-wide-1600.jpg" srcset="/assets/hero-wide-1600.jpg 1600w, /assets/hero-wide-2000.jpg 2000w" sizes="100vw"
            width="1600" height="900" fetchpriority="high" decoding="async"
            alt="ARLA, wearing a cap with his head lowered, photographed in deep blue light">
     </picture>
@@ -576,7 +576,7 @@ def build_sitemap():
         imgs = "".join(f"\n    <image:image><image:loc>{BASE}{i[0]}</image:loc><image:title>{e(i[1])}</image:title></image:image>" for i in images)
         return f"  <url>\n    <loc>{BASE}{loc}</loc>\n    <lastmod>{TODAY}</lastmod>\n    <priority>{prio}</priority>{imgs}\n  </url>"
     covers = [(f'/assets/{t["cover"]}.jpg', full_title(t)) for t in TRACKS if t["cover"]]
-    out = [url("/", "1.0", [("/assets/hero-wide-3200.jpg", "ARLA")] + covers), url("/releases/", "0.9"), url("/free-downloads/", "0.9")]
+    out = [url("/", "1.0", [("/assets/hero-wide-2000.jpg", "ARLA")] + covers), url("/releases/", "0.9"), url("/free-downloads/", "0.9")]
     for t in TRACKS:
         out.append(url(path_of(t), "0.8" if t["official"] else "0.7", [(f'/assets/{t["cover"]}.jpg', full_title(t))] if t["cover"] else []))
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(out) + "\n</urlset>\n"
